@@ -1,0 +1,133 @@
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: #020202;
+    overflow: hidden;
+  }
+
+  .card_wrapper{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+  }
+
+  .card {
+    position: relative;
+    width: 300px;
+    height: 425px;
+    border: 10px solid rgba(164, 18, 42, 0.32);
+    margin: 60px auto 0 auto;
+    box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to bottom, rgba(223, 185, 12, 0.42), rgba(171, 32, 32, 0.767)), url(/pari.jpg);
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    background-color: #e6f0e6;
+  }
+
+  .card .text-container {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+  }
+
+  .strikethrough {
+    text-decoration: line-through;
+  }
+
+  .card .text-container #head {
+    font-size: 2rem;
+    margin: 60px auto 60px auto;
+    font-weight: 800;
+    color: #fff;
+  }
+
+  .card p {
+    font-size: 1.1em;
+    line-height: 1.4;
+    font-family: 'Nobile';
+    color: rgb(12, 12, 46);
+    font-style: italic;
+    text-align: center;
+    margin: 30px auto 0px auto;
+    font-weight: 600;
+  }
+
+  .card .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: -9px 0px 0px -9px;
+    border: 10px solid rgb(165, 9, 93);
+    backface-visibility: hidden;
+    background-color: pink;
+    background-image: url(/pari.jpg);
+    background-position:center ;
+    background-repeat: no-repeat;
+    /* background-image: url($cover-image);
+   */
+    background-size: cover;
+    transform-style: preserve-3d;
+    transform-origin: 0% 50%;
+    transform: perspective(800px) rotateY(0deg);
+    transition: all 0.8s ease-in-out;
+  }
+
+  .card:hover .front {
+    transform: perspective(800px) rotateY(-170deg);
+    background-color: #d2dcd2;
+  }
+
+  .card:hover .back {
+    transform: perspective(800px) rotateY(-170deg);
+    box-shadow: 7px 0px 5px 0px rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    background-image: url(/pari.jpg);
+    background-position: center center;
+  }
+
+  .card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 10px solid rgba(164, 18, 42, 0.623);
+    margin: -10px 0px 0px -10px;
+    backface-visibility: visible;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .5));
+    transform-style: preserve-3d;
+    transform-origin: 0% 50%;
+    transform: perspective(800px) rotateY(0deg);
+    transition: all 0.8s ease-in-out;
+    background-image: url(/pari.jpg);
+    background-position: center center;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .imgset {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -215px;
+  }
+
+  .imgset img {
+    box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
+    border-radius: 5px;
+  }
+ 
+  canvas{display:block}
+  h2 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: "Source Sans Pro";
+    font-size: 2em;
+    font-weight: 900;
+    -webkit-user-select: none;
+    user-select: none;
+  }
